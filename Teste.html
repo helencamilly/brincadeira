@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index.html/title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha uma Opção</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            background-color: #007BFF;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Escolha uma Opção:</h1>
+    <button class="button" onclick="mostrarMensagem('presente')">Presente Misterioso</button>
+    <button class="button" onclick="mostrarMensagem('dinheiro')">2 Reais</button>
+
+    <div id="mensagem" class="message"></div>
+
+    <script>
+        function mostrarMensagem(opcao) {
+            const mensagem = document.getElementById('mensagem');
+            if (opcao === 'presente') {
+                mensagem.innerHTML = '💋'; // Emoji de beijo
+            } else if (opcao === 'dinheiro') {
+                mensagem.innerHTML = 'Pobre!'; // Mensagem para quem escolheu 2 reais
+            }
+        }
+    </script>
+</body>
+</html>
